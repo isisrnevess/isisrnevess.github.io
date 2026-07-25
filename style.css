@@ -1,25 +1,82 @@
-body{
-    background: linear-gradient(to bottom, #0b3d91, #4b86db);
+html {
+    background-color: blanchedalmond;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+h1 {
+    color:rgb(19, 3, 63); 
     text-align: center;
-    color: #cccccc;
-   font-size: 22px;                /* Remove margens padrão do navegador */
-    font-family: Arial, Helvetica, sans-serif;  /* Define uma fonte mais limpa */
 }
-form{
-    width:500px ;
-    margin: auto;
+
+footer {
+    background-color: rgb(249, 173, 166);
 }
-header{
-    border-radius: 25px 
+
+h2 {
+    color:rgb(19, 3, 63);
+    font-size: 1rem;
 }
-.ingresso, 
-.evento, 
-.dados {
-    display: flex;
-    justify-content: center;  
-    align-items: center;      
-    min-height: 10vh;     
-    }
-    .dados {
-    flex-direction: column;
+
+a:hover {
+    color:red;
 }
+
+.menu a:visited {
+    color: rgb(249, 173, 166);
+}
+
+.atividades a:visited {
+    color: rgb(19, 3, 63);
+}
+
+.cap04, .cap05, .cap07{
+    background-color: rgb(249, 173, 166);
+    width: 25vw;
+    padding: 5px;
+    border: 2px solid rgb(19, 3, 63);
+    margin: 5px;
+    display: inline-block;
+    vertical-align: top; 
+}
+
+.atividades a {
+    font-size: 12px;
+}
+
+.atividades h2 {
+    font-size: 14px;
+}
+
+.menu {
+    color: white;
+    background-color: rgb(19, 3, 63);
+    margin: 5px;
+    width: 100vw;
+    padding: 8px; 
+}
+
+.menu a {
+    color:white; 
+    text-decoration: none;
+}
+
+.menu a::before {
+  content: "› ";
+  color: white;
+}
+
+.rodape {
+    background-color: rgb(19, 3, 63);
+    padding: 8px;
+    width: 100vw;
+    margin-top: 8px
+}
+
+.rodape h2, .rodape p, .rodape small {
+    color: rgb(249, 173, 166);
+}
+
+
+
