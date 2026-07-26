@@ -1,0 +1,25 @@
+body{
+    background: linear-gradient(to bottom, #0b3d91, #4b86db);
+    text-align: center;
+    color: #cccccc;
+   font-size: 22px;                /* Remove margens padrão do navegador */
+    font-family: Arial, Helvetica, sans-serif;  /* Define uma fonte mais limpa */
+}
+form{
+    width:500px ;
+    margin: auto;
+}
+header{
+    border-radius: 25px 
+}
+.ingresso, 
+.evento, 
+.dados {
+    display: flex;
+    justify-content: center;  
+    align-items: center;      
+    min-height: 10vh;     
+    }
+    .dados {
+    flex-direction: column;
+}

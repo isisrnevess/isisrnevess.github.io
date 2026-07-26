@@ -1,0 +1,214 @@
+/* rem é uma unidade relativa que se baseia no font-size da raiz (html). É ideal para fontes, pois não se multiplica conforme o aninhamento. 
+em se baseia no font-size do elemento pai. É ideal para paddings e margins, pois escala com o texto.
+O %, assim como o em baseia-se no tamanho do elemento pai. É ideal para layouts flexíveis */
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0px;
+  color: #333333;
+  background-color: #f5f5f5;
+  box-sizing: border-box;
+}
+
+/* ---------- Cabeçalho ---------- */
+.cabecalho {
+  background-color: #1565c0;
+  padding: 32px;
+}
+
+h1 {
+  color: #ffffff;
+  font-size: 2rem; 
+  margin: 0px;
+}
+
+.subtitulo {
+  color: #bbdefb;
+  font-size: 1rem; 
+}
+
+/* ---------- Menu de navegação ---------- */
+.menu ul {
+  list-style: none;
+  padding: 0px;
+  margin: 16px 0px 0px 0px;
+}
+
+.menu li {
+  display: inline-block;
+  margin-right: 24px;
+}
+
+.menu ul a {
+  color: #ffffff;
+  font-size: 1rem; 
+  text-decoration: none;
+}
+
+.menu a::before {
+  content: "› ";
+  color: #bbdefb;
+}
+
+.menu a:hover {
+  text-decoration: underline;
+  color: #bbdefb;
+}
+
+/* ---------- Seções ---------- */
+.secao {
+  padding: 32px;
+  width: 90vw;
+  max-width: 960px; 
+}
+
+h2 {
+  color: #1565c0;
+  font-size: 1.5rem; 
+}
+
+h3 {
+  color: #0d47a1;
+  font-size: 1.25rem; 
+}
+
+p {
+  font-size: 1rem; 
+  line-height: 24px;
+}
+
+.destaque {
+  font-size: 1rem; 
+  font-weight: bold;
+  color: #b71c1c;
+}
+
+h2 + p {
+  margin-top: 16px;
+}
+
+.destaque ~ p {
+  font-style: italic;
+  color: #555555;
+}
+
+/* ---------- Grade de trilhas ---------- */
+.cartao {
+  display: inline-block;
+  width: 25vw; 
+  vertical-align: top;
+  border: 1px solid #cccccc;
+  background-color: #ffffff;
+  padding: 1em;
+  margin: 0.5em;
+  box-sizing: border-box;
+}
+
+.cartao:not(:last-child) {
+  margin-bottom: 1em;
+}
+
+.cartao:nth-child(odd) {
+  background-color: #ffffff;
+}
+
+.cartao:nth-child(even) {
+  background-color: #e3f2fd;
+}
+/* nth-child() permite selecionar elementos pela sua posição na árvore DOM, se está em uma posição par ou ímpar por exemplo, estilizando o elemento sem precisar criar uma classe */ 
+
+.botao {
+  display: inline-block;
+  background-color: #168210;
+  color: #ffffff;
+  font-size: 1rem; 
+  text-decoration: none;
+  padding: 0.5em 1em;
+  margin-top: 0.5em;
+}
+
+.botao:hover {
+  background-color: #b71c1c;
+  text-decoration: underline;
+}
+
+.cartao .botao {
+  background-color: #1565c0; 
+}
+/* Essa regra prevalecerá, porque ela possui duas regras de classe, somando 20 pontos, enquanto a regra ".botao" possui apenas uma, com 10 pontos. Logo, pela especificidade o botão ficará azul. */
+
+/* ---------- Lista de programação ---------- */
+.lista-dias {
+  font-size: 1rem; 
+  line-height: 28px;
+}
+
+.lista-dias > li {
+  font-weight: bold;
+}
+/* O seletor de filho direto (>) permite selecionar apenas os filhos diretos do elemento. Por exemplo, na regra acima o seletor permitiu selecionar apenas os elementos referentes aos dias da semana. Já o seletor descendente, permite selecionar todos os descendentes daquele elemento ou classe, independente da profundidade */
+
+.lista-dias li ul {
+  font-weight: normal;
+}
+
+.lista-dias > li:first-child, .lista-dias > li:last-child{
+  color: #b71c1c;
+}
+
+/* ---------- Formulário ---------- */
+.formulario {
+  width: 100%;
+  max-width: 400px;
+}
+
+label {
+  display: block;
+  font-size: 1rem; 
+  margin-top: 16px;
+}
+
+label::after {
+  content: " *";
+  color: #b71c1c;
+}
+
+input, textarea {
+  display: block;
+  width: 100%; 
+  font-size: 1rem; 
+  padding: 8px;
+  margin-top: 4px;
+  border: 1px solid #999999;
+}
+
+input[type="email"], input[type="password"] {
+  border-left: 4px solid #b71c1c;
+}
+
+input:focus, textarea:focus {
+  outline: 2px solid #1565c0;
+  outline-offset: 2px;
+}
+
+button {
+  font-size: 1rem; 
+  color: #ffffff;
+  background-color: #1565c0;
+  padding: 8px 24px;
+  margin-top: 16px;
+  border: 0px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0d47a1;
+}
+
+/* ---------- Rodapé ---------- */
+.rodape {
+  background-color: #263238;
+  color: #cfd8dc;
+  padding: 24px;
+  font-size: 0.875rem; 
+}

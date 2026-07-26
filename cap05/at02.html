@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>PWEB1 — Cap. 05 — AT02 — Cadastro de Usuário</title>
+    </head>
+    <body>
+        <header>
+            <h1>Cadastro de Usuário</h1>
+            <p><a href="../index.html">← Voltar para a página principal</a></p>
+        </header>
+        <main>
+            <form 
+            action="https://httpbin.org/post"
+            method="post">
+                <label for="nome">Nome Completo:
+                    <input
+                    type="text"
+                    name="nome"
+                    id="nome"
+                    placeholder="Digite seu nome"
+                    minlength="3"
+                    required
+                    />
+                </label>
+                 <label for="email">Email:
+                    <input
+                    type="email"
+                    name="email"
+                    id="email"
+                    placeholder="Digite seu email"
+                    required
+                    />
+                </label>
+                <label for="senha">Senha:
+                    <input 
+                    type="password"
+                    name="senha"
+                    id="senha"
+                    minlength="8"
+                    placeholder="Min. de 8 caracteres"
+                    required
+                    />
+                </label>
+                <label for="nascimento">Data de nascimento:
+                    <input 
+                        type="date"
+                        id="nascimento"
+                        name="nascimento"
+                        min="1900-01-01"
+                        required
+                    />
+                </label>
+                <fieldset>
+                    <legend>Gênero:</legend>
+                    <label>
+                        <input type="radio" name="genero" value="masculino"/>Masculino
+                        <input type="radio" name="genero" value="feminino"/>Feminino
+                        <input type="radio" name="genero" value="outro"/>Outro
+                        <input type="radio" name="genero" value="prefiro_nao_informar"/>Prefiro não informar
+                    </label>
+                </fieldset>
+                <fieldset>
+                    <legend>Aceite dos termos de uso: </legend>
+                    <label>
+                        <input 
+                        type="checkbox"
+                        name="aceite" 
+                        value="sim"
+                        required
+                        /> Sim, eu aceito.
+                    </label>
+                </fieldset>
+                <button type="reset">Limpar</button>
+                <button type="submit">Enviar</button>
+            </form>
+        </main>
+    </body>
+</html>

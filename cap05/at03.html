@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>PWEB1 — Cap. 05 — AT03 — Formulário de Matrícula Acadêmica</title>
+    </head>
+    <body>
+        <header>
+            <h1>Formulário de Matrícula Acadêmica</h1>
+            <p><a href="../index.html">← Voltar para a página principal</a></p>
+            <p>* Campos Obrigatórios</p>
+        </header>
+        <main>
+            <form
+            action="https://httpbin.org/post"
+            method="post">
+                <fieldset>
+                    <legend>Dados Pessoais:</legend>
+                    <label for="nome">Nome Completo:*
+                        <input
+                        type="text"
+                        name="nome"
+                        id="nome"
+                        placeholder="Digite seu nome"
+                        minlength="5"
+                        maxlength="100"
+                        required
+                        />
+                    </label>
+                    <label for="cpf">CPF:*
+                        <input
+                        type="text"
+                        name="cpf"
+                        id="cpf"
+                        required
+                        pattern="\d{3}\.\d{3}\.\d{3}-\d{2}"
+                        placeholder="000.000.000-00"
+                        title="CPF no formato 000.000.000-00"
+                        />
+                    </label>
+                    <label for="telefone">Telefone:
+                        <input
+                        type="tel"
+                        name="telefone"
+                        id="telefone"
+                        pattern="\(\d{2}\)\s\d{4,5}-\d{4}"
+                        placeholder="(82) 99999-9999"
+                        />
+                    </label>
+                    <label for="email">Email:*
+                        <input
+                        type="email"
+                        name="email"
+                        id="email"
+                        placeholder="Digite seu email"
+                        required
+                        />
+                    </label>
+                </fieldset>
+                <fieldset>
+                    <legend>Dados Acadêmicos:</legend>
+                    <label for="curso">Curso:*</label>
+                    <select id="curso" name="curso" required>
+                        <option value="">Selecione um curso...</option>
+                        <optgroup label="Computação">
+                            <option value="si">Sistemas de Informação</option>
+                            <option value="cc">Ciência da Computação</option>
+                            <option value="ec">Engenharia da Computação</option>
+                        </optgroup>
+                        <optgroup label="Saúde">
+                            <option value="med">Medicina</option>
+                            <option value="odonto">Odontologia</option>
+                            <option value="enf">Enfermagem</option>
+                        </optgroup>
+                    </select>
+                    <fieldset>
+                        <legend>Período de preferência</legend>
+                        <label>
+                            <input type="radio" name="periodo" value="manha" /> Manhã
+                        </label>
+                        <label>
+                            <input type="radio" name="periodo" value="tarde" /> Tarde
+                        </label>
+                        <label>
+                            <input type="radio" name="periodo" value="noite" /> Noite
+                        </label>
+                    </fieldset>
+                    <label for="ano_ingresso">Ano de ingresso:*
+                        <input 
+                        type="number"
+                        name="ano_ingresso"
+                        id="ano_ingresso"
+                        min="2026"
+                        max="2030"
+                        required
+                        />
+                    </label>
+                </fieldset>
+                <fieldset>
+                    <legend>Áreas de Interesse:</legend>
+                    <fieldset>
+                        <legend>Interesses</legend>
+                        <label>
+                            <input type="checkbox" name="interesses[]" value="cybersegurança"/> Cybersegurança
+                            <input type="checkbox" name="interesses[]" value="ia"/> Inteligência Artificial
+                            <input type="checkbox" name="interesses[]" value="robotica"/> Robótica e automação
+                            <input type="checkbox" name="interesses[]" value="banco_de_dados"/> Banco de dados
+                        </label>
+                    </fieldset>
+                </fieldset>
+                <button type="submit">Solicitar matrícula</button>
+                <button type="reset">Limpar formulário</button>
+            </form>
+        </main>
+    </body>
+</html>
