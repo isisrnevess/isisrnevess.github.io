@@ -1,12 +1,12 @@
 /* ---- Cores e fonte (mude à vontade) ---- */
 :root {
-  --cor: #b5533b;
-  --cor-escura: #8f3f2c;
+  --cor: #f9ada6;
+  --cor-escura: #13033f;
   --texto: #2b2b2b;
-  --suave: #7a6f66;
-  --fundo: #faf6f0;
-  --superficie: #ffffff;
-  --borda: #e3d9cc;
+  --suave: #6f6670;
+  --fundo: #fff4e6;
+  --superficie: #fffaf5;
+  --borda: #e8c9c5;
   --raio: 6px;
 }
 
@@ -69,11 +69,41 @@ body {
   border-top: 4px solid var(--cor);
   border-radius: var(--raio);
 }
-.cabecalho h1 { margin: 0; font-size: clamp(1.7rem, 4vw, 2.6rem); color: var(--cor-escura); }
-.cabecalho p { margin: 6px 0 0; color: var(--suave); font-style: italic; }
-.cabecalho nav { margin-top: 16px; display: flex; gap: 20px; flex-wrap: wrap; }
-.cabecalho nav a { color: var(--cor); text-decoration: none; font-weight: bold; border-bottom: 2px solid transparent; }
-.cabecalho nav a:hover { border-bottom-color: var(--cor); }
+
+.cabecalho h1 {
+  margin: 0;
+  font-size: clamp(1.7rem, 4vw, 2.6rem);
+  color: var(--cor-escura);
+}
+
+.cabecalho p {
+  margin: 6px 0 0;
+  color: var(--suave);
+  font-style: italic;
+}
+
+.cabecalho nav {
+  margin-top: 16px;
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.cabecalho nav a {
+  color: var(--cor-escura);
+  text-decoration: none;
+  font-weight: bold;
+  border-bottom: 2px solid transparent;
+}
+
+.cabecalho nav a:hover {
+  color: #e98f87;
+  border-bottom-color: #e98f87;
+}
+
+.cabecalho nav a:visited {
+  color: #8f3f2c;
+}
 
 .cartao {
   background: var(--superficie);
@@ -84,17 +114,48 @@ body {
 .cartao + .cartao { margin-top: 24px; }
 h2 { color: var(--cor-escura); margin-top: 0; border-bottom: 1px solid var(--borda); padding-bottom: 6px; }
 
+#sobre p {
+  margin: 5px 0;
+}
+
+.contato a {
+  color: var(--cor-escura);
+}
+
+.contato a:hover {
+  color: #e98f87;
+}
+
+.contato a:visited {
+  color: #8f3f2c;
+}
+
 .projeto {
   background: var(--fundo);
   border: 1px solid var(--borda);
   border-radius: var(--raio);
   padding: 16px;
 }
-.projeto h3 { margin: 0 0 6px; color: var(--cor); }
+
+.projeto h3 {
+  margin: 0 0 6px;
+  color: var(--cor-escura);
+}
+
+.projeto a {
+  color: var(--cor-escura);
+}
+
+.projeto a:hover {
+  color: #e98f87;
+}
+
+.projeto a:visited { 
+  color: #8f3f2c; 
+}
 
 .habilidades { list-style: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap; gap: 8px; }
 .habilidades li { background: transparent; border: 1px solid var(--cor); color: var(--cor-escura); border-radius: var(--raio); padding: 4px 12px; font-size: .9rem; }
 .contato { list-style: none; padding: 0; margin: 0; }
 .contato li { margin: 10px 0; }
-.contato a { color: var(--cor); }
 .rodape { text-align: center; color: var(--suave); padding: 8px; font-size: .9rem; font-style: italic; }
